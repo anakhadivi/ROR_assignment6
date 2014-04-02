@@ -1,0 +1,8 @@
+<h1>List of all forum discussions:</h1>
+
+<% @forum.each do |forum| %>
+  Title: <%=link_to forum.title, forum_path(forum) %>
+  <br>
+  Created by: <%=forum.user.fname %>
+<% end %>
+

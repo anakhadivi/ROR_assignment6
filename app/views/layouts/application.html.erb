@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Homework6</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class = 'alert' %>
+	<% flash[:notice] if flash[:notice] %>
+</div>
+<div class = 'notice' %>
+	<% flash[:alert] if flash[:alert] %>
+</div>
+<%= yield %>
+<br>
+<%=link_to 'Log Out', log_out_path %>
+</body>
+</html>

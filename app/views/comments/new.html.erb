@@ -1,0 +1,11 @@
+<h1>Reply to Forum Discussion</h1>
+
+<%=form_for [@forum, @comment] do |f| %>
+  <%=f.label :title %>
+  <%=f.text_field :title %>
+  <br>
+  <%=f.label :post %>
+  <%=f.text_area :post %>
+  <br>
+  <%=f.submit :submit %>
+<% end %>

@@ -1,0 +1,10 @@
+<b>Title: <%=@forum.title%></b>
+<br>
+Creator: <%=@forum.user.fname%>
+<br>
+Post: <%=@forum.post%>
+
+<br>
+<%=link_to 'Reply' , new_forum_comment_path(@forum) %>
+<br>
+<%= link_to 'All Forum Discussions', forums_path %>
